@@ -16,6 +16,7 @@ public class CollegeManagementContext : DbContext
     public DbSet<Professor> Professors { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<Grade> Grades { get; set; }
+    public DbSet<CourseSubject> CourseSubjects { get; set; }
 
     public CollegeManagementContext() {}
     public CollegeManagementContext(DbContextOptions<CollegeManagementContext> options) : base(options) {}
@@ -55,6 +56,8 @@ public class CollegeManagementContext : DbContext
         //     .HasForeignKey(g => g.StudentId);
 
         modelBuilder.SeedCourse();
-        // modelBuilder.SeedSubjects();
+        modelBuilder.SeedSubjects();
+        modelBuilder.SeedCourseSubject();
+        modelBuilder.SeedProfessors();
     }
 }

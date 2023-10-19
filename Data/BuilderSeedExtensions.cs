@@ -44,51 +44,61 @@ public static class BuilderSeedExtensions
             {
                 Id = 1,
                 Name = "Mathematics",
+                ProfessorId = 10,
             },
             new Subject
             {
                 Id = 2,
                 Name = "Physics",
+                ProfessorId = 2,
             },
             new Subject
             {
                 Id = 3,
                 Name = "Computer Science",
+                ProfessorId = 1,
             },
             new Subject
             {
                 Id = 4,
                 Name = "Mechanics",
+                ProfessorId = 3,
             },
             new Subject
             {
                 Id = 5,
                 Name = "Chemistry",
+                ProfessorId = 6,
             },
             new Subject
             {
                 Id = 6,
                 Name = "Logic Systems",
+                ProfessorId = 7,
             },
             new Subject
             {
                 Id = 7,
                 Name = "Termodynamics",
+                ProfessorId = 8,
             },
             new Subject
             {
                 Id = 8,
                 Name = "Economy",
+                ProfessorId = 9,
             },
             new Subject
             {
                 Id = 9,
                 Name = "Probability",
+                ProfessorId = 4,
             },
             new Subject
             {
                 Id = 10,
                 Name = "Programming",
+                ProfessorId = 5,
             }
         );
     }
@@ -168,6 +178,28 @@ public static class BuilderSeedExtensions
         }
     );
 
+    }
+
+    public static void SeedCourseSubject(this ModelBuilder builder)
+    {
+        builder.Entity<CourseSubject>().HasData(
+        new CourseSubject { CourseId = 1, SubjectId = 1 },
+        new CourseSubject { CourseId = 1, SubjectId = 2 },
+        new CourseSubject { CourseId = 1, SubjectId = 6 },
+        new CourseSubject { CourseId = 2, SubjectId = 3 },
+        new CourseSubject { CourseId = 2, SubjectId = 5 },
+        new CourseSubject { CourseId = 2, SubjectId = 6 },
+        new CourseSubject { CourseId = 3, SubjectId = 1 },
+        new CourseSubject { CourseId = 3, SubjectId = 4 },
+        new CourseSubject { CourseId = 3, SubjectId = 7 },
+        new CourseSubject { CourseId = 4, SubjectId = 8 },
+        new CourseSubject { CourseId = 4, SubjectId = 4 },
+        new CourseSubject { CourseId = 4, SubjectId = 4 },
+        new CourseSubject { CourseId = 5, SubjectId = 5 },
+        new CourseSubject { CourseId = 5, SubjectId = 7 },
+        new CourseSubject { CourseId = 5, SubjectId = 9 }
+        // Add more CourseSubject entities to customize the relationships
+    );
     }
 }
 

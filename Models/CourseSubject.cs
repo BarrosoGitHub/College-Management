@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace CollegeManagement.Models;
+
+public class CourseSubject
+{
+    public int CourseId { get; set; }
+    public Course Course { get; set; }
+
+    public int SubjectId { get; set; }
+    public Subject Subject { get; set; }
+}

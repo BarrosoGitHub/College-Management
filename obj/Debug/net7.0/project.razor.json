@@ -18655,6 +18655,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Professors\\Details.cshtml",
+      "TargetPath": "Views\\Professors\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -18667,6 +18672,11 @@
     {
       "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Subjects\\Index.cshtml",
+      "TargetPath": "Views\\Subjects\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

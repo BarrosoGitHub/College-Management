@@ -1,0 +1,13 @@
+@model CollegeManagement.Models.Professor
+
+<h2>Professor Details</h2>
+
+<div>
+    <h4>Name: @Model.Name</h4>
+    <p>Age: @Model.Age</p>
+    <p>Salary: @Model.Salary</p>
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index", "Subjects")
+</p>

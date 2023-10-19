@@ -1,0 +1,32 @@
+@model List<CollegeManagement.Models.Subject>
+
+<h1>Subjects</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Professor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subject in Model)
+        {
+            <tr>
+                <td>@subject.Id</td>
+                <td>@subject.Name</td>
+                <td>
+                    @if (subject.Professor != null)
+                    {
+                        <a href="@Url.Action("Details", "Professors", new { id = subject.Professor.Id })">@subject.Professor.Name</a>
+                    }
+                    else
+                    {
+                        <span>No professor assigned</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

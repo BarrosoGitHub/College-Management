@@ -1,13 +1,25 @@
-@model CollegeManagement.Models.Professor
+@model List<CollegeManagement.Models.Professor>
 
-<h2>Professor Details</h2>
+<h1>Professors</h1>
 
-<div>
-    <h4>Name: @Model.Name</h4>
-    <p>Age: @Model.Age</p>
-    <p>Salary: @Model.Salary</p>
-</div>
-
-<p>
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var professor in Model)
+        {
+            <tr>
+                <td>@professor.Id</td>
+                <td>@professor.Name</td>
+                <td>@professor.Age</td>
+                <td>@professor.Salary</td>
+            </tr>
+        }
+    </tbody>
+</table>

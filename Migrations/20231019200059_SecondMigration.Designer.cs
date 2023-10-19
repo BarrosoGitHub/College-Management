@@ -4,6 +4,7 @@ using CollegeManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeManagement.Migrations
 {
     [DbContext(typeof(CollegeManagementContext))]
-    partial class CollegeManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20231019200059_SecondMigration")]
+    partial class SecondMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -204,68 +207,6 @@ namespace CollegeManagement.Migrations
                     b.HasIndex("ProfessorId");
 
                     b.ToTable("Subjects");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Mathematics",
-                            ProfessorId = 10
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Physics",
-                            ProfessorId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Computer Science",
-                            ProfessorId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Mechanics",
-                            ProfessorId = 3
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Chemistry",
-                            ProfessorId = 6
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Logic Systems",
-                            ProfessorId = 7
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Termodynamics",
-                            ProfessorId = 8
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Economy",
-                            ProfessorId = 9
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Probability",
-                            ProfessorId = 4
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "Programming",
-                            ProfessorId = 5
-                        });
                 });
 
             modelBuilder.Entity("CourseSubject", b =>

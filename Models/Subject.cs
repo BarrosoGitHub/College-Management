@@ -12,6 +12,5 @@ public class Subject
     public int ProfessorId { get; set; }
     public Professor Professor { get; set; }
     public ICollection<Student> Students { get; set; }
-    public int CourseId { get; set; }
-    public Course Course { get; set; }
+    public ICollection<Course> Courses { get; set; }
 }

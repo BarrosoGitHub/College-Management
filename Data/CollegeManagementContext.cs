@@ -7,29 +7,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CollegeManagement.Data;
 
-
-
 public class CollegeManagementContext : DbContext
 {
+
+
     public DbSet<Course> Courses { get; set; }
     public DbSet<Subject> Subjects { get; set; }
     public DbSet<Professor> Professors { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<Grade> Grades { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        // Configure the connection string for your SQL Server database
-        optionsBuilder.UseSqlServer("YourConnectionString");
-    }
+    public CollegeManagementContext() {}
+    public CollegeManagementContext(DbContextOptions<CollegeManagementContext> options) : base(options) {}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Configure the relationships between entities
         modelBuilder.Entity<Course>()
-            .HasMany(c => c.Subjects)
-            .WithOne(s => s.Course)
-            .HasForeignKey(s => s.CourseId);
+            .HasMany(c => c.Subjects);
 
         modelBuilder.Entity<Subject>()
             .HasOne(s => s.Professor)
@@ -58,5 +53,8 @@ public class CollegeManagementContext : DbContext
             .HasOne(g => g.Student)
             .WithMany()
             .HasForeignKey(g => g.StudentId);
+
+        modelBuilder.SeedCourse();
+        modelBuilder.SeedSubjects();
     }
 }

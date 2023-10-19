@@ -1,0 +1,16 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+
+services:
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      MSSQL_SA_PASSWORD: "MyPass@word"  
+      ACCEPT_EULA: "Y"                   
+      MSSQL_PID: "Developer"
+      MSSQL_USER: "SA"
+    ports:
+      - "1433:1433"

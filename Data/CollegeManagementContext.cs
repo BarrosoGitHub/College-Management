@@ -22,39 +22,39 @@ public class CollegeManagementContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Configure the relationships between entities
-        modelBuilder.Entity<Course>()
-            .HasMany(c => c.Subjects);
+        // // Configure the relationships between entities
+        // modelBuilder.Entity<Course>()
+        //     .HasMany(c => c.Subjects);
 
-        modelBuilder.Entity<Subject>()
-            .HasOne(s => s.Professor)
-            .WithMany(p => p.Subjects)
-            .HasForeignKey(s => s.ProfessorId);
+        // modelBuilder.Entity<Subject>()
+        //     .HasOne(s => s.Professor)
+        //     .WithMany(p => p.Subjects)
+        //     .HasForeignKey(s => s.ProfessorId);
 
-        modelBuilder.Entity<Student>()
-            .HasMany(s => s.Subjects)
-            .WithMany(s => s.Students)
-            .UsingEntity<Dictionary<string, object>>(
-                "StudentSubject",
-                j => j.HasOne<Subject>().WithMany().HasForeignKey("SubjectId"),
-                j => j.HasOne<Student>().WithMany().HasForeignKey("StudentId"),
-                j =>
-                {
-                    j.Property<int>("Id");
-                    j.HasKey("Id");
-                });
+        // modelBuilder.Entity<Student>()
+        //     .HasMany(s => s.Subjects)
+        //     .WithMany(s => s.Students)
+        //     .UsingEntity<Dictionary<string, object>>(
+        //         "StudentSubject",
+        //         j => j.HasOne<Subject>().WithMany().HasForeignKey("SubjectId"),
+        //         j => j.HasOne<Student>().WithMany().HasForeignKey("StudentId"),
+        //         j =>
+        //         {
+        //             j.Property<int>("Id");
+        //             j.HasKey("Id");
+        //         });
 
-        modelBuilder.Entity<Grade>()
-            .HasOne(g => g.Subject)
-            .WithMany()
-            .HasForeignKey(g => g.SubjectId);
+        // modelBuilder.Entity<Grade>()
+        //     .HasOne(g => g.Subject)
+        //     .WithMany()
+        //     .HasForeignKey(g => g.SubjectId);
 
-        modelBuilder.Entity<Grade>()
-            .HasOne(g => g.Student)
-            .WithMany()
-            .HasForeignKey(g => g.StudentId);
+        // modelBuilder.Entity<Grade>()
+        //     .HasOne(g => g.Student)
+        //     .WithMany()
+        //     .HasForeignKey(g => g.StudentId);
 
         modelBuilder.SeedCourse();
-        modelBuilder.SeedSubjects();
+        // modelBuilder.SeedSubjects();
     }
 }

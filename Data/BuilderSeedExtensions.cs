@@ -92,5 +92,82 @@ public static class BuilderSeedExtensions
             }
         );
     }
+
+    public static void SeedProfessors(this ModelBuilder builder)
+{
+    builder.Entity<Professor>().HasData(
+        new Professor
+        {
+            Id = 1,
+            Name = "John Smith",
+            Age = 40,
+            Salary = 5000
+        },
+        new Professor
+        {
+            Id = 2,
+            Name = "Emily Johnson",
+            Age = 45,
+            Salary = 5500
+        },
+        new Professor
+        {
+            Id = 3,
+            Name = "Michael Williams",
+            Age = 38,
+            Salary = 4800
+        },
+        new Professor
+        {
+            Id = 4,
+            Name = "Jessica Brown",
+            Age = 50,
+            Salary = 6000
+        },
+        new Professor
+        {
+            Id = 5,
+            Name = "Daniel Miller",
+            Age = 42,
+            Salary = 5200
+        },
+        new Professor
+        {
+            Id = 6,
+            Name = "Olivia Davis",
+            Age = 36,
+            Salary = 4700
+        },
+        new Professor
+        {
+            Id = 7,
+            Name = "David Garcia",
+            Age = 48,
+            Salary = 5800
+        },
+        new Professor
+        {
+            Id = 8,
+            Name = "Sophia Wilson",
+            Age = 44,
+            Salary = 5300
+        },
+        new Professor
+        {
+            Id = 9,
+            Name = "Joseph Taylor",
+            Age = 39,
+            Salary = 4900
+        },
+        new Professor
+        {
+            Id = 10,
+            Name = "Emma Anderson",
+            Age = 37,
+            Salary = 4600
+        }
+    );
+
+    }
 }
 

@@ -18645,6 +18645,11 @@
   "RootNamespace": "CollegeManagement",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Students\\Index.cshtml",
+      "TargetPath": "Views\\Students\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -18667,6 +18672,11 @@
     {
       "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\Views\\Professors\\Index.cshtml",
+      "TargetPath": "Views\\Professors\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

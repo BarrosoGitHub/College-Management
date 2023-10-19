@@ -13,6 +13,7 @@ public static class BuilderSeedExtensions
             {
                 Id = 1,
                 Name = "Electrical Engineering"
+                
             },
             new Course
             {
@@ -193,7 +194,7 @@ public static class BuilderSeedExtensions
         new CourseSubject { CourseId = 3, SubjectId = 4 },
         new CourseSubject { CourseId = 3, SubjectId = 7 },
         new CourseSubject { CourseId = 4, SubjectId = 8 },
-        new CourseSubject { CourseId = 4, SubjectId = 4 },
+        new CourseSubject { CourseId = 4, SubjectId = 6 },
         new CourseSubject { CourseId = 4, SubjectId = 4 },
         new CourseSubject { CourseId = 5, SubjectId = 5 },
         new CourseSubject { CourseId = 5, SubjectId = 7 },

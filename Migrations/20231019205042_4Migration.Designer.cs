@@ -4,6 +4,7 @@ using CollegeManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeManagement.Migrations
 {
     [DbContext(typeof(CollegeManagementContext))]
-    partial class CollegeManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20231019205042_4Migration")]
+    partial class _4Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,98 +66,6 @@ namespace CollegeManagement.Migrations
                         {
                             Id = 5,
                             Name = "Chemical Engineering"
-                        });
-                });
-
-            modelBuilder.Entity("CollegeManagement.Models.CourseSubject", b =>
-                {
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SubjectId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CourseId", "SubjectId");
-
-                    b.HasIndex("SubjectId");
-
-                    b.ToTable("CourseSubjects");
-
-                    b.HasData(
-                        new
-                        {
-                            CourseId = 1,
-                            SubjectId = 1
-                        },
-                        new
-                        {
-                            CourseId = 1,
-                            SubjectId = 2
-                        },
-                        new
-                        {
-                            CourseId = 1,
-                            SubjectId = 6
-                        },
-                        new
-                        {
-                            CourseId = 2,
-                            SubjectId = 3
-                        },
-                        new
-                        {
-                            CourseId = 2,
-                            SubjectId = 5
-                        },
-                        new
-                        {
-                            CourseId = 2,
-                            SubjectId = 6
-                        },
-                        new
-                        {
-                            CourseId = 3,
-                            SubjectId = 1
-                        },
-                        new
-                        {
-                            CourseId = 3,
-                            SubjectId = 4
-                        },
-                        new
-                        {
-                            CourseId = 3,
-                            SubjectId = 7
-                        },
-                        new
-                        {
-                            CourseId = 4,
-                            SubjectId = 8
-                        },
-                        new
-                        {
-                            CourseId = 4,
-                            SubjectId = 6
-                        },
-                        new
-                        {
-                            CourseId = 4,
-                            SubjectId = 4
-                        },
-                        new
-                        {
-                            CourseId = 5,
-                            SubjectId = 5
-                        },
-                        new
-                        {
-                            CourseId = 5,
-                            SubjectId = 7
-                        },
-                        new
-                        {
-                            CourseId = 5,
-                            SubjectId = 9
                         });
                 });
 
@@ -323,68 +234,6 @@ namespace CollegeManagement.Migrations
                     b.HasIndex("ProfessorId");
 
                     b.ToTable("Subjects");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Mathematics",
-                            ProfessorId = 10
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Physics",
-                            ProfessorId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Computer Science",
-                            ProfessorId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Mechanics",
-                            ProfessorId = 3
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Chemistry",
-                            ProfessorId = 6
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Logic Systems",
-                            ProfessorId = 7
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Termodynamics",
-                            ProfessorId = 8
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Economy",
-                            ProfessorId = 9
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Probability",
-                            ProfessorId = 4
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "Programming",
-                            ProfessorId = 5
-                        });
                 });
 
             modelBuilder.Entity("CourseSubject", b =>
@@ -415,25 +264,6 @@ namespace CollegeManagement.Migrations
                     b.HasIndex("SubjectsId");
 
                     b.ToTable("StudentSubject");
-                });
-
-            modelBuilder.Entity("CollegeManagement.Models.CourseSubject", b =>
-                {
-                    b.HasOne("CollegeManagement.Models.Course", "Course")
-                        .WithMany("CourseSubjects")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CollegeManagement.Models.Subject", "Subject")
-                        .WithMany("CourseSubjects")
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("CollegeManagement.Models.Grade", b =>
@@ -494,11 +324,6 @@ namespace CollegeManagement.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CollegeManagement.Models.Course", b =>
-                {
-                    b.Navigation("CourseSubjects");
-                });
-
             modelBuilder.Entity("CollegeManagement.Models.Professor", b =>
                 {
                     b.Navigation("Subjects");
@@ -507,11 +332,6 @@ namespace CollegeManagement.Migrations
             modelBuilder.Entity("CollegeManagement.Models.Student", b =>
                 {
                     b.Navigation("Grades");
-                });
-
-            modelBuilder.Entity("CollegeManagement.Models.Subject", b =>
-                {
-                    b.Navigation("CourseSubjects");
                 });
 #pragma warning restore 612, 618
         }

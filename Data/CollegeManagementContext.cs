@@ -23,6 +23,25 @@ public class CollegeManagementContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        modelBuilder.Entity<CourseSubject>()
+        .HasKey(cs => new { cs.CourseId, cs.SubjectId });
+
+    modelBuilder.Entity<CourseSubject>()
+        .HasOne(cs => cs.Course)
+        .WithMany(c => c.CourseSubjects)
+        .HasForeignKey(cs => cs.CourseId);
+
+    modelBuilder.Entity<CourseSubject>()
+        .HasOne(cs => cs.Subject)
+        .WithMany(s => s.CourseSubjects)
+        .HasForeignKey(cs => cs.SubjectId);
+
+        // modelBuilder.Entity<Course>()
+        // .HasMany(c => c.Subjects)
+        // .WithMany(s => s.Courses)
+        // .UsingEntity(j => j.ToTable("CourseSubjects"));
+
         // // Configure the relationships between entities
         // modelBuilder.Entity<Course>()
         //     .HasMany(c => c.Subjects);
@@ -57,7 +76,7 @@ public class CollegeManagementContext : DbContext
 
         modelBuilder.SeedCourse();
         modelBuilder.SeedSubjects();
-        modelBuilder.SeedCourseSubject();
         modelBuilder.SeedProfessors();
+        modelBuilder.SeedCourseSubject();
     }
 }

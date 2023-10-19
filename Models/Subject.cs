@@ -13,4 +13,7 @@ public class Subject
     public Professor Professor { get; set; } = null!;
     public ICollection<Student> Students { get; set; } = null!;
     public ICollection<Course> Courses { get; set; } = null!;
+    public ICollection<CourseSubject> CourseSubjects { get; set; } = null!;
+
+
 }

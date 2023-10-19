@@ -19,7 +19,12 @@ namespace CollegeManagement.Controllers
         // GET: Courses
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Courses.ToListAsync());
+            var courses = await _context.Courses
+                .Include(c => c.CourseSubjects)
+                .ThenInclude(cs => cs.Subject)
+                .ToListAsync();
+
+            return View(courses);
         }
 
         // GET: Courses/Details/5

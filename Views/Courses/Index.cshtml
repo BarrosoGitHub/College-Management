@@ -1,21 +1,28 @@
-@model IEnumerable<CollegeManagement.Models.Course>
+model IEnumerable<CollegeManagement.Models.Course>
 
 <h1>Courses</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-        </tr>
-    }
-    </tbody>
-</table>
+@foreach (var course in Model)
+{
+    <h2>@course.Name</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Subject Id</th>
+                <th>Subject Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (course.CourseSubjects != null)
+        {
+            @foreach (var courseSubject in course.CourseSubjects)
+            {
+                <tr>
+                    <td>@courseSubject.Subject?.Id</td>
+                    <td>@courseSubject.Subject?.Name</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+}

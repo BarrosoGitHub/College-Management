@@ -1,0 +1,48 @@
+@model CollegeManagement.Models.Student
+
+<h1>Student Details</h1>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <th>Course</th>
+        <td>@Model.Course.Name</td>
+    </tr>
+    <tr>
+        <th>Course Average</th>
+        <td>@Model.CourseAverage</td>
+    </tr>
+</table>
+
+<h2>Subjects and Grades</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var grade in Model.Grades)
+        {
+            <tr>
+                <td>@grade.Subject.Name</td>
+                <td>@grade.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Index", "Students")">Back to List</a>

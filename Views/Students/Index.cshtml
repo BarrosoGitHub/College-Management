@@ -8,8 +8,8 @@
             <th>Id</th>
             <th>Name</th>
             <th>Age</th>
+            <th>Course</th>
             <th>Course Average</th>
-
         </tr>
     </thead>
     <tbody>
@@ -17,10 +17,10 @@
     {
         <tr>
             <td>@student.Id</td>
-            <td>@student.Name</td>
+            <td><a href="@Url.Action("Details", "Students", new { id = student.Id })">@student.Name</a></td>
             <td>@student.Age</td>
+            <td>@student.Course.Name</td>
             <td>@student.CourseAverage</td>
-
         </tr>
     }
     </tbody>

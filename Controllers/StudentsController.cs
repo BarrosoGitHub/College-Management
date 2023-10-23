@@ -25,7 +25,7 @@ namespace CollegeManagement.Controllers
                 .ThenInclude(cs => cs.Subject)
                 .AsQueryable();
 
-            
+
 
             if (courseId != null && subjectId != null)
             {
@@ -46,14 +46,14 @@ namespace CollegeManagement.Controllers
         }
 
         // GET: Students/Details/5
-        public IActionResult Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = _context.Students.FirstOrDefault(s => s.Id == id);
+            var student = _context.Students
+                .Include(s => s.Course)
+                .Include(s => s.Course.CourseSubjects)
+                .Include(s => s.Grades)
+                .ThenInclude(g => g.Subject)
+                .FirstOrDefault(s => s.Id == id);
 
             if (student == null)
             {
@@ -163,7 +163,7 @@ namespace CollegeManagement.Controllers
             {
 
                 return student.Grades.Average(g => g.Value);
-                
+
             }
 
             return 0;

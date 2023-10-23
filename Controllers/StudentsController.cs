@@ -15,10 +15,20 @@ namespace CollegeManagement.Controllers
         }
 
         // GET: Students
-        public IActionResult Index()
+        public IActionResult Index(int? courseId, int? subjectId)
         {
-            var students = _context.Students.ToList();
-            return View(students);
+            var students = _context.Students.AsQueryable();
+
+            if (courseId != null && subjectId != null)
+            {
+                students = students.Where(s => s.CourseId == courseId);
+            }
+            else if (courseId != null)
+            {
+                students = students.Where(s => s.CourseId == courseId);
+            }
+
+            return View(students.ToList());
         }
 
         // GET: Students/Details/5

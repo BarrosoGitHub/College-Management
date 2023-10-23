@@ -4,6 +4,7 @@ using CollegeManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeManagement.Migrations
 {
     [DbContext(typeof(CollegeManagementContext))]
-    partial class CollegeManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20231023131423_new")]
+    partial class @new
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -290,7 +293,11 @@ namespace CollegeManagement.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CourseId")
+                    b.Property<string>("CourseId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CourseId1")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -306,413 +313,11 @@ namespace CollegeManagement.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("CourseId1");
 
                     b.HasIndex("SubjectId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Age = 19,
-                            CourseId = 5,
-                            Name = "Student 1",
-                            RegistrationNumber = "REG001"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Age = 24,
-                            CourseId = 2,
-                            Name = "Student 2",
-                            RegistrationNumber = "REG002"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Age = 24,
-                            CourseId = 3,
-                            Name = "Student 3",
-                            RegistrationNumber = "REG003"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Age = 20,
-                            CourseId = 2,
-                            Name = "Student 4",
-                            RegistrationNumber = "REG004"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Age = 20,
-                            CourseId = 2,
-                            Name = "Student 5",
-                            RegistrationNumber = "REG005"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Age = 24,
-                            CourseId = 3,
-                            Name = "Student 6",
-                            RegistrationNumber = "REG006"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Age = 21,
-                            CourseId = 4,
-                            Name = "Student 7",
-                            RegistrationNumber = "REG007"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Age = 24,
-                            CourseId = 5,
-                            Name = "Student 8",
-                            RegistrationNumber = "REG008"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Age = 22,
-                            CourseId = 1,
-                            Name = "Student 9",
-                            RegistrationNumber = "REG009"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Age = 20,
-                            CourseId = 5,
-                            Name = "Student 10",
-                            RegistrationNumber = "REG010"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Age = 19,
-                            CourseId = 5,
-                            Name = "Student 11",
-                            RegistrationNumber = "REG011"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Age = 22,
-                            CourseId = 3,
-                            Name = "Student 12",
-                            RegistrationNumber = "REG012"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Age = 23,
-                            CourseId = 2,
-                            Name = "Student 13",
-                            RegistrationNumber = "REG013"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Age = 20,
-                            CourseId = 4,
-                            Name = "Student 14",
-                            RegistrationNumber = "REG014"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Age = 24,
-                            CourseId = 5,
-                            Name = "Student 15",
-                            RegistrationNumber = "REG015"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Age = 24,
-                            CourseId = 3,
-                            Name = "Student 16",
-                            RegistrationNumber = "REG016"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Age = 22,
-                            CourseId = 5,
-                            Name = "Student 17",
-                            RegistrationNumber = "REG017"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Age = 21,
-                            CourseId = 2,
-                            Name = "Student 18",
-                            RegistrationNumber = "REG018"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Age = 20,
-                            CourseId = 3,
-                            Name = "Student 19",
-                            RegistrationNumber = "REG019"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Age = 18,
-                            CourseId = 1,
-                            Name = "Student 20",
-                            RegistrationNumber = "REG020"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Age = 23,
-                            CourseId = 3,
-                            Name = "Student 21",
-                            RegistrationNumber = "REG021"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Age = 18,
-                            CourseId = 2,
-                            Name = "Student 22",
-                            RegistrationNumber = "REG022"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            Age = 23,
-                            CourseId = 2,
-                            Name = "Student 23",
-                            RegistrationNumber = "REG023"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Age = 19,
-                            CourseId = 3,
-                            Name = "Student 24",
-                            RegistrationNumber = "REG024"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Age = 24,
-                            CourseId = 1,
-                            Name = "Student 25",
-                            RegistrationNumber = "REG025"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Age = 18,
-                            CourseId = 1,
-                            Name = "Student 26",
-                            RegistrationNumber = "REG026"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Age = 20,
-                            CourseId = 4,
-                            Name = "Student 27",
-                            RegistrationNumber = "REG027"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Age = 20,
-                            CourseId = 1,
-                            Name = "Student 28",
-                            RegistrationNumber = "REG028"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Age = 21,
-                            CourseId = 1,
-                            Name = "Student 29",
-                            RegistrationNumber = "REG029"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            Age = 22,
-                            CourseId = 4,
-                            Name = "Student 30",
-                            RegistrationNumber = "REG030"
-                        },
-                        new
-                        {
-                            Id = 31,
-                            Age = 19,
-                            CourseId = 4,
-                            Name = "Student 31",
-                            RegistrationNumber = "REG031"
-                        },
-                        new
-                        {
-                            Id = 32,
-                            Age = 20,
-                            CourseId = 2,
-                            Name = "Student 32",
-                            RegistrationNumber = "REG032"
-                        },
-                        new
-                        {
-                            Id = 33,
-                            Age = 18,
-                            CourseId = 3,
-                            Name = "Student 33",
-                            RegistrationNumber = "REG033"
-                        },
-                        new
-                        {
-                            Id = 34,
-                            Age = 20,
-                            CourseId = 1,
-                            Name = "Student 34",
-                            RegistrationNumber = "REG034"
-                        },
-                        new
-                        {
-                            Id = 35,
-                            Age = 23,
-                            CourseId = 3,
-                            Name = "Student 35",
-                            RegistrationNumber = "REG035"
-                        },
-                        new
-                        {
-                            Id = 36,
-                            Age = 23,
-                            CourseId = 1,
-                            Name = "Student 36",
-                            RegistrationNumber = "REG036"
-                        },
-                        new
-                        {
-                            Id = 37,
-                            Age = 18,
-                            CourseId = 1,
-                            Name = "Student 37",
-                            RegistrationNumber = "REG037"
-                        },
-                        new
-                        {
-                            Id = 38,
-                            Age = 20,
-                            CourseId = 4,
-                            Name = "Student 38",
-                            RegistrationNumber = "REG038"
-                        },
-                        new
-                        {
-                            Id = 39,
-                            Age = 24,
-                            CourseId = 3,
-                            Name = "Student 39",
-                            RegistrationNumber = "REG039"
-                        },
-                        new
-                        {
-                            Id = 40,
-                            Age = 22,
-                            CourseId = 4,
-                            Name = "Student 40",
-                            RegistrationNumber = "REG040"
-                        },
-                        new
-                        {
-                            Id = 41,
-                            Age = 20,
-                            CourseId = 3,
-                            Name = "Student 41",
-                            RegistrationNumber = "REG041"
-                        },
-                        new
-                        {
-                            Id = 42,
-                            Age = 19,
-                            CourseId = 1,
-                            Name = "Student 42",
-                            RegistrationNumber = "REG042"
-                        },
-                        new
-                        {
-                            Id = 43,
-                            Age = 19,
-                            CourseId = 4,
-                            Name = "Student 43",
-                            RegistrationNumber = "REG043"
-                        },
-                        new
-                        {
-                            Id = 44,
-                            Age = 24,
-                            CourseId = 1,
-                            Name = "Student 44",
-                            RegistrationNumber = "REG044"
-                        },
-                        new
-                        {
-                            Id = 45,
-                            Age = 24,
-                            CourseId = 1,
-                            Name = "Student 45",
-                            RegistrationNumber = "REG045"
-                        },
-                        new
-                        {
-                            Id = 46,
-                            Age = 20,
-                            CourseId = 4,
-                            Name = "Student 46",
-                            RegistrationNumber = "REG046"
-                        },
-                        new
-                        {
-                            Id = 47,
-                            Age = 20,
-                            CourseId = 5,
-                            Name = "Student 47",
-                            RegistrationNumber = "REG047"
-                        },
-                        new
-                        {
-                            Id = 48,
-                            Age = 18,
-                            CourseId = 4,
-                            Name = "Student 48",
-                            RegistrationNumber = "REG048"
-                        },
-                        new
-                        {
-                            Id = 49,
-                            Age = 22,
-                            CourseId = 5,
-                            Name = "Student 49",
-                            RegistrationNumber = "REG049"
-                        },
-                        new
-                        {
-                            Id = 50,
-                            Age = 22,
-                            CourseId = 3,
-                            Name = "Student 50",
-                            RegistrationNumber = "REG050"
-                        });
                 });
 
             modelBuilder.Entity("CollegeManagement.Models.Subject", b =>
@@ -856,7 +461,9 @@ namespace CollegeManagement.Migrations
                 {
                     b.HasOne("CollegeManagement.Models.Course", "Course")
                         .WithMany()
-                        .HasForeignKey("CourseId");
+                        .HasForeignKey("CourseId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CollegeManagement.Models.Subject", null)
                         .WithMany("Students")

@@ -10,6 +10,8 @@ model IEnumerable<CollegeManagement.Models.Course>
             <tr>
                 <th>Subject Id</th>
                 <th>Subject Name</th>
+                <th>Professor Name</th>
+                <th>Students</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +22,10 @@ model IEnumerable<CollegeManagement.Models.Course>
                 <tr>
                     <td>@courseSubject.Subject?.Id</td>
                     <td>@courseSubject.Subject?.Name</td>
+                    <td>@courseSubject.Subject?.Professor?.Name</td>
+                    <td>
+                        <a href="/Students?courseId=@course.Id&subjectId=@courseSubject.Subject?.Id">View Students</a> <!-- Add this line -->
+                    </td>
                 </tr>
             }
         }

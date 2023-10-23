@@ -5,6 +5,7 @@ public class Student
     public string Name { get; set; }
     public int Age { get; set; }
     public string RegistrationNumber { get; set; }
-    public ICollection<Subject> Subjects { get; set; } = null!;
+    public int? CourseId { get; set; }
+    public Course Course { get; set; }
     public ICollection<Grade> Grades { get; set; } = null!;
 }

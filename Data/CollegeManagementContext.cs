@@ -78,5 +78,6 @@ public class CollegeManagementContext : DbContext
         modelBuilder.SeedSubjects();
         modelBuilder.SeedProfessors();
         modelBuilder.SeedCourseSubject();
+        modelBuilder.SeedStudents();
     }
 }

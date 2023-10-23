@@ -13,7 +13,7 @@ public static class BuilderSeedExtensions
             {
                 Id = 1,
                 Name = "Electrical Engineering"
-                
+
             },
             new Course
             {
@@ -105,79 +105,79 @@ public static class BuilderSeedExtensions
     }
 
     public static void SeedProfessors(this ModelBuilder builder)
-{
-    builder.Entity<Professor>().HasData(
-        new Professor
-        {
-            Id = 1,
-            Name = "John Smith",
-            Age = 40,
-            Salary = 5000
-        },
-        new Professor
-        {
-            Id = 2,
-            Name = "Emily Johnson",
-            Age = 45,
-            Salary = 5500
-        },
-        new Professor
-        {
-            Id = 3,
-            Name = "Michael Williams",
-            Age = 38,
-            Salary = 4800
-        },
-        new Professor
-        {
-            Id = 4,
-            Name = "Jessica Brown",
-            Age = 50,
-            Salary = 6000
-        },
-        new Professor
-        {
-            Id = 5,
-            Name = "Daniel Miller",
-            Age = 42,
-            Salary = 5200
-        },
-        new Professor
-        {
-            Id = 6,
-            Name = "Olivia Davis",
-            Age = 36,
-            Salary = 4700
-        },
-        new Professor
-        {
-            Id = 7,
-            Name = "David Garcia",
-            Age = 48,
-            Salary = 5800
-        },
-        new Professor
-        {
-            Id = 8,
-            Name = "Sophia Wilson",
-            Age = 44,
-            Salary = 5300
-        },
-        new Professor
-        {
-            Id = 9,
-            Name = "Joseph Taylor",
-            Age = 39,
-            Salary = 4900
-        },
-        new Professor
-        {
-            Id = 10,
-            Name = "Emma Anderson",
-            Age = 37,
-            Salary = 4600
-        }
-    );
+    {
+        builder.Entity<Professor>().HasData(
+            new Professor
+            {
+                Id = 1,
+                Name = "John Smith",
+                Age = 40,
+                Salary = 5000
+            },
+            new Professor
+            {
+                Id = 2,
+                Name = "Emily Johnson",
+                Age = 45,
+                Salary = 5500
+            },
+            new Professor
+            {
+                Id = 3,
+                Name = "Michael Williams",
+                Age = 38,
+                Salary = 4800
+            },
+            new Professor
+            {
+                Id = 4,
+                Name = "Jessica Brown",
+                Age = 50,
+                Salary = 6000
+            },
+            new Professor
+            {
+                Id = 5,
+                Name = "Daniel Miller",
+                Age = 42,
+                Salary = 5200
+            },
+            new Professor
+            {
+                Id = 6,
+                Name = "Olivia Davis",
+                Age = 36,
+                Salary = 4700
+            },
+            new Professor
+            {
+                Id = 7,
+                Name = "David Garcia",
+                Age = 48,
+                Salary = 5800
+            },
+            new Professor
+            {
+                Id = 8,
+                Name = "Sophia Wilson",
+                Age = 44,
+                Salary = 5300
+            },
+            new Professor
+            {
+                Id = 9,
+                Name = "Joseph Taylor",
+                Age = 39,
+                Salary = 4900
+            },
+            new Professor
+            {
+                Id = 10,
+                Name = "Emma Anderson",
+                Age = 37,
+                Salary = 4600
+            }
+        );
 
     }
 
@@ -201,6 +201,26 @@ public static class BuilderSeedExtensions
         new CourseSubject { CourseId = 5, SubjectId = 9 }
         // Add more CourseSubject entities to customize the relationships
     );
+    }
+
+    public static void SeedStudents(this ModelBuilder builder)
+    {
+        var students = new List<Student>();
+        var random = new Random();
+
+        for (int i = 1; i <= 50; i++)
+        {
+            students.Add(new Student
+            {
+                Id = i,
+                Name = $"Student {i}",
+                Age = random.Next(18, 25), // Random age between 18 and 25
+                RegistrationNumber = $"REG{i:D3}", // Registration number with leading zeros
+                CourseId = random.Next(1, 6)// Random course id between 1 and 5
+            });
+        }
+
+        builder.Entity<Student>().HasData(students);
     }
 }
 

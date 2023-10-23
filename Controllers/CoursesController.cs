@@ -22,6 +22,7 @@ namespace CollegeManagement.Controllers
             var courses = await _context.Courses
                 .Include(c => c.CourseSubjects)
                 .ThenInclude(cs => cs.Subject)
+                .ThenInclude(s => s.Professor)
                 .ToListAsync();
 
             return View(courses);

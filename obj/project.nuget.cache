@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZiUkGmSxVpeuPO3ZDTtsYndCAhp5BfOULsJqy4u0NFKFF7Kvc3UzL6kTxGxUCVdjrXaZKHKn6G1TrsmgxSGsNg==",
+  "dgSpecHash": "kLfvkh0W9dQfQYfqcTpLvQM+luka3vJ1BrNKy4ZO8OIdQ4Wx8Wxm8xQB2a/fUELL64A5YYwpGzNdvmdVRSL5Tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dibarroso\\Desktop\\College Management\\CollegeManagement\\CollegeManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dibarroso\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\dibarroso\\.nuget\\packages\\faker.net\\2.0.154\\faker.net.2.0.154.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -41,6 +42,7 @@
     "C:\\Users\\dibarroso\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\dibarroso\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\dibarroso\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

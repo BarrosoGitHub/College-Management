@@ -73,3 +73,5 @@ C:\Users\dibarroso\Desktop\College Management\CollegeManagement\obj\Debug\net7.0
 C:\Users\dibarroso\Desktop\College Management\CollegeManagement\obj\Debug\net7.0\CollegeManagement.pdb
 C:\Users\dibarroso\Desktop\College Management\CollegeManagement\obj\Debug\net7.0\CollegeManagement.genruntimeconfig.cache
 C:\Users\dibarroso\Desktop\College Management\CollegeManagement\obj\Debug\net7.0\ref\CollegeManagement.dll
+C:\Users\dibarroso\Desktop\College Management\CollegeManagement\bin\Debug\net7.0\Faker.Net.6.0.dll
+C:\Users\dibarroso\Desktop\College Management\CollegeManagement\bin\Debug\net7.0\de-DE\Faker.Net.6.0.resources.dll

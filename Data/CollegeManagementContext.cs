@@ -10,7 +10,6 @@ namespace CollegeManagement.Data;
 public class CollegeManagementContext : DbContext
 {
 
-
     public DbSet<Course> Courses { get; set; }
     public DbSet<Subject> Subjects { get; set; }
     public DbSet<Professor> Professors { get; set; }

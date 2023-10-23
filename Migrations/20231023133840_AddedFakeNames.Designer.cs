@@ -4,6 +4,7 @@ using CollegeManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeManagement.Migrations
 {
     [DbContext(typeof(CollegeManagementContext))]
-    partial class CollegeManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20231023133840_AddedFakeNames")]
+    partial class AddedFakeNames
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -290,9 +293,6 @@ namespace CollegeManagement.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("CourseAverage")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<int?>("CourseId")
                         .HasColumnType("int");
 
@@ -319,451 +319,401 @@ namespace CollegeManagement.Migrations
                         new
                         {
                             Id = 1,
-                            Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Dr. Myriam Bayer II",
+                            Age = 20,
+                            CourseId = 2,
+                            Name = "Yesenia Konopelski",
                             RegistrationNumber = "REG001"
                         },
                         new
                         {
                             Id = 2,
-                            Age = 22,
-                            CourseAverage = 0m,
+                            Age = 24,
                             CourseId = 2,
-                            Name = "Jasper Ondricka",
+                            Name = "Mr. Willy Pfeffer",
                             RegistrationNumber = "REG002"
                         },
                         new
                         {
                             Id = 3,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Chelsie Kovacek Jr.",
+                            Age = 23,
+                            CourseId = 1,
+                            Name = "Prof. Kelsie Kirlin",
                             RegistrationNumber = "REG003"
                         },
                         new
                         {
                             Id = 4,
-                            Age = 19,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Lula Crooks",
+                            Age = 18,
+                            CourseId = 3,
+                            Name = "Ms. Avis Murray I",
                             RegistrationNumber = "REG004"
                         },
                         new
                         {
                             Id = 5,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Coleman Anderson",
+                            Age = 24,
+                            CourseId = 2,
+                            Name = "Mrs. Derrick O'Keefe",
                             RegistrationNumber = "REG005"
                         },
                         new
                         {
                             Id = 6,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Nathan Walsh",
+                            Age = 18,
+                            CourseId = 5,
+                            Name = "Ethan Bartoletti III",
                             RegistrationNumber = "REG006"
                         },
                         new
                         {
                             Id = 7,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Dr. Maia Lukas Konopelski",
+                            Age = 18,
+                            CourseId = 3,
+                            Name = "Matt Swift",
                             RegistrationNumber = "REG007"
                         },
                         new
                         {
                             Id = 8,
-                            Age = 18,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Lambert Ines Romaguera II",
+                            Age = 21,
+                            CourseId = 2,
+                            Name = "Elissa Wolf",
                             RegistrationNumber = "REG008"
                         },
                         new
                         {
                             Id = 9,
                             Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Lavinia Stroman",
+                            CourseId = 2,
+                            Name = "Verner Bruen",
                             RegistrationNumber = "REG009"
                         },
                         new
                         {
                             Id = 10,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Ora Buckridge",
+                            Age = 19,
+                            CourseId = 3,
+                            Name = "Matteo Smitham",
                             RegistrationNumber = "REG010"
                         },
                         new
                         {
                             Id = 11,
                             Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Prof. Aurelie Marco Klein",
+                            CourseId = 4,
+                            Name = "Dr. Jevon Bradtke Jr.",
                             RegistrationNumber = "REG011"
                         },
                         new
                         {
                             Id = 12,
-                            Age = 19,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Niko Langosh",
+                            Age = 18,
+                            CourseId = 2,
+                            Name = "Lucie Wilfredo Greenfelder V",
                             RegistrationNumber = "REG012"
                         },
                         new
                         {
                             Id = 13,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Lonie Hane",
+                            Age = 24,
+                            CourseId = 5,
+                            Name = "Ms. Aiyana Katelin Beatty III",
                             RegistrationNumber = "REG013"
                         },
                         new
                         {
                             Id = 14,
-                            Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Mr. Fletcher Roberts MD",
+                            Age = 19,
+                            CourseId = 3,
+                            Name = "Prof. Terence Homenick DVM",
                             RegistrationNumber = "REG014"
                         },
                         new
                         {
                             Id = 15,
-                            Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Rosendo Towne",
+                            Age = 19,
+                            CourseId = 2,
+                            Name = "Osvaldo Kiehn",
                             RegistrationNumber = "REG015"
                         },
                         new
                         {
                             Id = 16,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Rogelio Larson",
+                            Age = 21,
+                            CourseId = 2,
+                            Name = "Abbigail Johnson",
                             RegistrationNumber = "REG016"
                         },
                         new
                         {
                             Id = 17,
-                            Age = 19,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Jeanie Jennings Graham DVM",
+                            Age = 20,
+                            CourseId = 4,
+                            Name = "Toni Johnston",
                             RegistrationNumber = "REG017"
                         },
                         new
                         {
                             Id = 18,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Mr. Lindsey Keenan Mayer DDS",
+                            Age = 20,
+                            CourseId = 2,
+                            Name = "Miss Ezequiel Legros Sr.",
                             RegistrationNumber = "REG018"
                         },
                         new
                         {
                             Id = 19,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Marcelo Michale Labadie Jr.",
+                            Age = 19,
+                            CourseId = 4,
+                            Name = "Magdalen Ziemann",
                             RegistrationNumber = "REG019"
                         },
                         new
                         {
                             Id = 20,
                             Age = 22,
-                            CourseAverage = 0m,
                             CourseId = 2,
-                            Name = "Jane Zieme",
+                            Name = "Mr. Violet Wisozk MD",
                             RegistrationNumber = "REG020"
                         },
                         new
                         {
                             Id = 21,
-                            Age = 20,
-                            CourseAverage = 0m,
+                            Age = 19,
                             CourseId = 5,
-                            Name = "Edgar Glover Jr.",
+                            Name = "Aracely Schowalter",
                             RegistrationNumber = "REG021"
                         },
                         new
                         {
                             Id = 22,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Dominic Nikolaus DDS",
+                            Age = 22,
+                            CourseId = 3,
+                            Name = "Gerhard Gorczany",
                             RegistrationNumber = "REG022"
                         },
                         new
                         {
                             Id = 23,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Everette Rempel",
+                            Age = 23,
+                            CourseId = 1,
+                            Name = "Kenna Goyette",
                             RegistrationNumber = "REG023"
                         },
                         new
                         {
                             Id = 24,
-                            Age = 21,
-                            CourseAverage = 0m,
+                            Age = 23,
                             CourseId = 5,
-                            Name = "Jonathan Kuphal",
+                            Name = "Dr. Ralph Schinner",
                             RegistrationNumber = "REG024"
                         },
                         new
                         {
                             Id = 25,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Dayne Oma Nikolaus Sr.",
+                            Age = 19,
+                            CourseId = 3,
+                            Name = "Henri Denesik",
                             RegistrationNumber = "REG025"
                         },
                         new
                         {
                             Id = 26,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Ms. Arnulfo Kamren Sporer",
+                            Age = 24,
+                            CourseId = 2,
+                            Name = "Lavern Kling",
                             RegistrationNumber = "REG026"
                         },
                         new
                         {
                             Id = 27,
-                            Age = 18,
-                            CourseAverage = 0m,
+                            Age = 20,
                             CourseId = 5,
-                            Name = "Dr. Jarrell Pfeffer",
+                            Name = "Heidi Olson",
                             RegistrationNumber = "REG027"
                         },
                         new
                         {
                             Id = 28,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Maudie Rempel",
+                            Age = 23,
+                            CourseId = 1,
+                            Name = "Bulah Batz DDS",
                             RegistrationNumber = "REG028"
                         },
                         new
                         {
                             Id = 29,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Ms. Walter Nickolas Kshlerin",
+                            Age = 21,
+                            CourseId = 5,
+                            Name = "Emory Bosco",
                             RegistrationNumber = "REG029"
                         },
                         new
                         {
                             Id = 30,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Jace Brekke",
+                            Age = 23,
+                            CourseId = 1,
+                            Name = "Maud Streich V",
                             RegistrationNumber = "REG030"
                         },
                         new
                         {
                             Id = 31,
-                            Age = 23,
-                            CourseAverage = 0m,
+                            Age = 19,
                             CourseId = 5,
-                            Name = "Ottilie Bergstrom",
+                            Name = "Marguerite Kihn",
                             RegistrationNumber = "REG031"
                         },
                         new
                         {
                             Id = 32,
-                            Age = 18,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "Lukas Hartmann",
+                            Age = 20,
+                            CourseId = 4,
+                            Name = "Kaia Carson Ortiz II",
                             RegistrationNumber = "REG032"
                         },
                         new
                         {
                             Id = 33,
-                            Age = 21,
-                            CourseAverage = 0m,
+                            Age = 19,
                             CourseId = 3,
-                            Name = "Miss Pablo Hyatt",
+                            Name = "Prof. Antwon Gus Hessel",
                             RegistrationNumber = "REG033"
                         },
                         new
                         {
                             Id = 34,
                             Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Arlo Nienow",
+                            CourseId = 2,
+                            Name = "Ms. Baylee Priscilla Ondricka II",
                             RegistrationNumber = "REG034"
                         },
                         new
                         {
                             Id = 35,
-                            Age = 20,
-                            CourseAverage = 0m,
+                            Age = 23,
                             CourseId = 3,
-                            Name = "Julie Pagac",
+                            Name = "Ms. Ed Adalberto Jacobson",
                             RegistrationNumber = "REG035"
                         },
                         new
                         {
                             Id = 36,
-                            Age = 18,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Aurelia Langworth",
+                            Age = 22,
+                            CourseId = 1,
+                            Name = "Lavada Crist",
                             RegistrationNumber = "REG036"
                         },
                         new
                         {
                             Id = 37,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Santos Casper DDS",
+                            Age = 23,
+                            CourseId = 3,
+                            Name = "Bell Nolan",
                             RegistrationNumber = "REG037"
                         },
                         new
                         {
                             Id = 38,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Mr. Phoebe Oswald Becker",
+                            Age = 23,
+                            CourseId = 5,
+                            Name = "Antwon Graham MD",
                             RegistrationNumber = "REG038"
                         },
                         new
                         {
                             Id = 39,
                             Age = 19,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Katelin Hayes",
+                            CourseId = 2,
+                            Name = "Larry Johnston",
                             RegistrationNumber = "REG039"
                         },
                         new
                         {
                             Id = 40,
-                            Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 5,
-                            Name = "May Sibyl Price Sr.",
+                            Age = 21,
+                            CourseId = 4,
+                            Name = "Antonetta Schinner",
                             RegistrationNumber = "REG040"
                         },
                         new
                         {
                             Id = 41,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Velva Mayer",
+                            Age = 20,
+                            CourseId = 5,
+                            Name = "Prof. Araceli Major Hoeger II",
                             RegistrationNumber = "REG041"
                         },
                         new
                         {
                             Id = 42,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Ivah Ritchie",
+                            Age = 24,
+                            CourseId = 4,
+                            Name = "Prof. Adonis Kerluke",
                             RegistrationNumber = "REG042"
                         },
                         new
                         {
                             Id = 43,
                             Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Marion Aufderhar",
+                            CourseId = 2,
+                            Name = "Dr. Burley Cayla Bauch IV",
                             RegistrationNumber = "REG043"
                         },
                         new
                         {
                             Id = 44,
-                            Age = 22,
-                            CourseAverage = 0m,
-                            CourseId = 1,
-                            Name = "Miss Tod Beier",
+                            Age = 20,
+                            CourseId = 4,
+                            Name = "Ms. Estefania Macejkovic",
                             RegistrationNumber = "REG044"
                         },
                         new
                         {
                             Id = 45,
-                            Age = 24,
-                            CourseAverage = 0m,
-                            CourseId = 4,
-                            Name = "Sophia Jeff Cole Jr.",
+                            Age = 18,
+                            CourseId = 5,
+                            Name = "Miss Chandler Chris Leannon III",
                             RegistrationNumber = "REG045"
                         },
                         new
                         {
                             Id = 46,
-                            Age = 23,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Caterina Bernhard",
+                            Age = 21,
+                            CourseId = 1,
+                            Name = "Prof. Madonna Mary Hartmann",
                             RegistrationNumber = "REG046"
                         },
                         new
                         {
                             Id = 47,
-                            Age = 19,
-                            CourseAverage = 0m,
-                            CourseId = 3,
-                            Name = "Theresia Schamberger V",
+                            Age = 18,
+                            CourseId = 1,
+                            Name = "Cierra Welch",
                             RegistrationNumber = "REG047"
                         },
                         new
                         {
                             Id = 48,
-                            Age = 21,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Judge Wintheiser",
+                            Age = 20,
+                            CourseId = 3,
+                            Name = "Miss Olin Crona MD",
                             RegistrationNumber = "REG048"
                         },
                         new
                         {
                             Id = 49,
-                            Age = 20,
-                            CourseAverage = 0m,
-                            CourseId = 2,
-                            Name = "Rebecca King",
+                            Age = 23,
+                            CourseId = 3,
+                            Name = "Zella Sporer",
                             RegistrationNumber = "REG049"
                         },
                         new
                         {
                             Id = 50,
-                            Age = 18,
-                            CourseAverage = 0m,
+                            Age = 23,
                             CourseId = 5,
-                            Name = "Ms. Jailyn Lloyd Sawayn V",
+                            Name = "Ms. Jacinto Mossie Schroeder IV",
                             RegistrationNumber = "REG050"
                         });
                 });

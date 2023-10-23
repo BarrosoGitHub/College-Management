@@ -8,10 +8,9 @@ model IEnumerable<CollegeManagement.Models.Course>
     <table class="table">
         <thead>
             <tr>
-                <th>Subject Id</th>
                 <th>Subject Name</th>
                 <th>Professor Name</th>
-                <th>Students</th>
+                <th>Students</th> <!-- Add this line -->
             </tr>
         </thead>
         <tbody>
@@ -20,7 +19,6 @@ model IEnumerable<CollegeManagement.Models.Course>
             @foreach (var courseSubject in course.CourseSubjects)
             {
                 <tr>
-                    <td>@courseSubject.Subject?.Id</td>
                     <td>@courseSubject.Subject?.Name</td>
                     <td>@courseSubject.Subject?.Professor?.Name</td>
                     <td>

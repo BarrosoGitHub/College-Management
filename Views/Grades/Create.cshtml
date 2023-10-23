@@ -1,0 +1,31 @@
+@model Grade
+
+<h1>Create Grade</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="SubjectId">Subject:</label>
+        <select class="form-control" id="SubjectId" name="SubjectId" required>
+            <option value="">-- Select Subject --</option>
+            @foreach (var subject in ViewBag.Subjects)
+            {
+                <option value="@subject.Id">@subject.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="StudentId">Student:</label>
+        <select class="form-control" id="StudentId" name="StudentId" required>
+            <option value="">-- Select Student --</option>
+            @foreach (var student in ViewBag.Students)
+            {
+                <option value="@student.Id">@student.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Value">Value:</label>
+        <input type="number" class="form-control" id="Value" name="Value" step="0.01" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

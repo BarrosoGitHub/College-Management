@@ -1,5 +1,6 @@
 using CollegeManagement.Models;
 using Microsoft.EntityFrameworkCore;
+using Faker;
 
 namespace CollegeManagement.Data;
 
@@ -204,23 +205,23 @@ public static class BuilderSeedExtensions
     }
 
     public static void SeedStudents(this ModelBuilder builder)
-    {
-        var students = new List<Student>();
-        var random = new Random();
+   {
+       var students = new List<Student>();
+       var random = new Random();
 
-        for (int i = 1; i <= 50; i++)
-        {
-            students.Add(new Student
-            {
-                Id = i,
-                Name = $"Student {i}",
-                Age = random.Next(18, 25), // Random age between 18 and 25
-                RegistrationNumber = $"REG{i:D3}", // Registration number with leading zeros
-                CourseId = random.Next(1, 6)// Random course id between 1 and 5
-            });
-        }
+       for (int i = 1; i <= 50; i++)
+       {
+           students.Add(new Student
+           {
+               Id = i,
+               Name = Faker.Name.FullName(),
+               Age = random.Next(18, 25), // Random age between 18 and 25
+               RegistrationNumber = $"REG{i:D3}", // Registration number with leading zeros
+               CourseId = random.Next(1, 6) // Random course id between 1 and 5
+           });
+       }
 
-        builder.Entity<Student>().HasData(students);
-    }
+       builder.Entity<Student>().HasData(students);
+   }
 }
 

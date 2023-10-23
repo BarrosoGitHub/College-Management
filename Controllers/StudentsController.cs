@@ -2,6 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using CollegeManagement.Data;
 using CollegeManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegeManagement.Controllers
 {
@@ -17,15 +18,28 @@ namespace CollegeManagement.Controllers
         // GET: Students
         public IActionResult Index(int? courseId, int? subjectId)
         {
-            var students = _context.Students.AsQueryable();
+            var students = _context.Students
+                .Include(s => s.Course)
+                .Include(s => s.Course.CourseSubjects)
+                .Include(s => s.Grades)
+                .ThenInclude(cs => cs.Subject)
+                .AsQueryable();
+
+            
 
             if (courseId != null && subjectId != null)
             {
-                students = students.Where(s => s.CourseId == courseId);
+                students = students
+                    .Where(s => s.CourseId == courseId && s.Course.CourseSubjects.Any(cs => cs.SubjectId == subjectId));
             }
             else if (courseId != null)
             {
                 students = students.Where(s => s.CourseId == courseId);
+            }
+
+            foreach (var student in students)
+            {
+                student.CourseAverage = CalculateCourseAverage(student);
             }
 
             return View(students.ToList());
@@ -142,5 +156,18 @@ namespace CollegeManagement.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+        public decimal CalculateCourseAverage(Student student)
+        {
+            if (student.Course != null && student.Grades != null && student.Grades.Any())
+            {
+
+                return student.Grades.Average(g => g.Value);
+                
+            }
+
+            return 0;
+        }
     }
+
 }

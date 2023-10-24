@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CollegeManagement
 build_property.RootNamespace = CollegeManagement
-build_property.ProjectDir = C:\Users\dibarroso\Desktop\College Management\CollegeManagement\
+build_property.ProjectDir = c:\Users\dibarroso\Desktop\College Management\CollegeManagement\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dibarroso\Desktop\College Management\CollegeManagement
+build_property.MSBuildProjectDirectory = c:\Users\dibarroso\Desktop\College Management\CollegeManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Courses/Index.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Grades/Create.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Grades/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhZGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Home/Index.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Home/Privacy.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Professors/Details.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Professors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Professors/Index.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Professors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/Error.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Students/Details.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Students/Index.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Subjects/Index.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Subjects/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViamVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/_ViewImports.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/_ViewStart.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/_Layout.cshtml]
+[c:/Users/dibarroso/Desktop/College Management/CollegeManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q18o8114b0
